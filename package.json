@@ -1,0 +1,31 @@
+{
+  "name": "neopixel-edison-mraa",
+  "version": "0.0.1",
+  "description": "NeoPixel library for edison via mraa gpio. Tested only in ubilinux and WS2812.",
+  "dependencies": {
+    "node-gyp": "^3.6.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "gyp:configure": "node ./node_modules/node-gyp/bin/node-gyp.js configure",
+    "gyp:build": "node ./node_modules/node-gyp/bin/node-gyp.js build",
+    "gyp:all": "npm run gyp:configure && npm run gyp:build",
+    "swig": "swig -c++ -javascript -node -DV8_VERSION=0x045103 -outdir gen NeoPixel.i",
+    "make": "npm run swig && npm run gyp:all"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evgen48/NeoPixel-edison-mraa.git"
+  },
+  "keywords": [
+    "mraa",
+    "nodejs",
+    "edison"
+  ],
+  "author": "Eugene Smirnov, Alexander Demidovskij",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/evgen48/NeoPixel-edison-mraa/issues"
+  },
+  "homepage": "https://github.com/evgen48/NeoPixel-edison-mraa#readme"
+}

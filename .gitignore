@@ -2,5 +2,5 @@
 *.o
 *_wrap.c
 npm-debug.log
-node-modules
-build
+node-modules/
+build/

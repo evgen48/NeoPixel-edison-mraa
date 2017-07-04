@@ -8,7 +8,7 @@ NeoPixel:
 	gcc -lmraa -Wall -fPIC -x c -c NeoPixel.cpp
 	gcc -lmraa -shared -o NeoPixel.so NeoPixel.o
 
-	# shared objec for nodejs
+	# shared object for nodejs
 	swig -c++ -javascript -node -DV8_VERSION=0x045103 NeoPixel.i
 	node-gyp configure
 	node-gyp build
